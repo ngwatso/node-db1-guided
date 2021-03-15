@@ -28,8 +28,8 @@ async function create(post) {
   return getById(id)
 }
 
-function update() {
-  return Promise.resolve('update wired')
+function update(id, post) {
+  return 
 }
 
 function remove() {
