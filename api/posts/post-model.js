@@ -14,7 +14,7 @@ function get() {
   return db('posts')
 }
 
-function getById() {
+function getById(id) {
   return db.raw(`SELECT * FROM posts WHERE id = 1`);
 }
 
