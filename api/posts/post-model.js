@@ -28,8 +28,9 @@ async function create(post) {
   return getById(id)
 }
 
-function update(id, post) {
-  return db('posts').where('id', id).update(post)
+async function update(id, post) {
+  await db('posts').where('id', id).update(post)
+  
 }
 
 function remove() {
