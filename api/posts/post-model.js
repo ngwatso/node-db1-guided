@@ -19,12 +19,12 @@ function getById(id) {
   return db('posts').where('id', id).first()
 }
 
-function create(post) {
+async function create(post) {
   // return db.raw(`
   //   insert into posts (title, contents)
   //   values ('foo', 'bar');
   // `)
-  return db('posts').insert(post, ['id', 'title', 'contents'])
+  const [id] = await db('posts').insert(post, ['id', 'title', 'contents']) // in postgres this would work
 }
 
 function update() {
