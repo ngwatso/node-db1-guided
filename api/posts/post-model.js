@@ -15,7 +15,7 @@ function get() {
 }
 
 function getById(id) {
-  return db.raw(`SELECT * FROM posts WHERE id = ${id}`); // HORRIBLE
+  return db.raw(`SELECT * FROM posts WHERE id = ); // HORRIBLE
 }
 
 function create() {
