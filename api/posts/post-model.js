@@ -16,11 +16,11 @@ function get() {
 
 function getById(id) {
   // return db.raw(`SELECT * FROM posts WHERE id = ?`, [id]);
-  return db('posts').where({ id }).first()
+  return db('posts').where('id', id).first()
 }
 
 function create() {
-  return Promise.resolve('create wired')
+  return db.raw('insert into posts (title, contents)`)
 }
 
 function update() {
