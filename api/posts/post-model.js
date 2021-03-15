@@ -24,7 +24,7 @@ function create(post) {
   //   insert into posts (title, contents)
   //   values ('foo', 'bar');
   // `)
-  return db('posts').insert(post, ['id'])
+  return db('posts').insert(post, ['id', 'title', 'contents'])
 }
 
 function update() {
