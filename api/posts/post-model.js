@@ -15,7 +15,7 @@ function get() {
 }
 
 function getById() {
-  return Promise.resolve('getById wired')
+  
 }
 
 function create() {
