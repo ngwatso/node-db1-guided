@@ -9,7 +9,8 @@ module.exports = {
 }
 
 function get() {
-  return db.raw(`SELECT * FROM posts LIMIT 3;`)
+  // return db.raw(`SELECT * FROM posts LIMIT 3;`)
+  
 }
 
 function getById() {
