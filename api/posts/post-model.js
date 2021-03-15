@@ -20,7 +20,10 @@ function getById(id) {
 }
 
 function create() {
-  return db.raw('insert into posts (title, contents)`)
+  return db.raw(`
+    insert into posts (title, contents)
+    values ('foo', 'bar');
+  `)
 }
 
 function update() {
