@@ -33,6 +33,6 @@ async function update(id, post) {
   return getById(id)
 }
 
-function remove() {
-  return Promise.resolve('delete wired')
+function remove(id) {
+  return db('posts').where({ id }).del()
 }
