@@ -10,7 +10,8 @@ module.exports = {
 
 function get() {
   // return db.raw(`SELECT * FROM posts LIMIT 3;`)
-  return db.select().table('posts')
+  // return db.select('*').table('posts')
+  return db('posts')
 }
 
 function getById() {
