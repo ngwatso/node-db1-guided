@@ -25,6 +25,7 @@ async function create(post) {
   //   values ('foo', 'bar');
   // `)
   const [id] = await db('posts').insert(post, ['id', 'title', 'contents']) // in postgres this would work
+  return getById(id)
 }
 
 function update() {
