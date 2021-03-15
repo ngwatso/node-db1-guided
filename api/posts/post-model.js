@@ -19,11 +19,12 @@ function getById(id) {
   return db('posts').where('id', id).first()
 }
 
-function create() {
-  return db.raw(`
-    insert into posts (title, contents)
-    values ('foo', 'bar');
-  `)
+function create(post) {
+  // return db.raw(`
+  //   insert into posts (title, contents)
+  //   values ('foo', 'bar');
+  // `)
+  return db('posts').insert(post)
 }
 
 function update() {
