@@ -30,7 +30,7 @@ async function create(post) {
 
 async function update(id, post) {
   await db('posts').where('id', id).update(post)
-  
+  return getById(id)
 }
 
 function remove() {
